@@ -37,9 +37,10 @@ The workflow converts raw screenshots into gallery-ready images through a 4-stag
     *   Optimization to WebP for final storage.
 
 ### 2. Key Tools
-*   `pipeline/run_sam_lama_local.py`: The main entry point for the cleaning phase.
-*   `pipeline/run_flux_restoration.py`: The restoration engine wrapper (Flux + RealESRGAN).
-*   `pipeline/assemble_final.py`: Merges the enhanced image with the original color profile.
+*   `pipeline/run_yolo_detection.py`: Identifies UI elements and watermarks using 4 YOLO models, outputting JSON coordinates.
+*   `pipeline/run_sam_lama_local.py`: Generates pixel-perfect masks with SAM and erases artifacts using LaMa to create a clean base.
+*   `pipeline/run_flux_restoration.py`: Enhances details using Flux Inpainting, upscales with RealESRGAN, and corrects faces with GFPGAN.
+*   `pipeline/assemble_final.py`: Merges the clean base and enhanced details using Frequency Separation for a natural look.
 
 ## Operational Workflow
 
