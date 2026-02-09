@@ -1,0 +1,41 @@
+
+# Deny everything by default
+*
+
+# Allow directories to traverse
+!*/
+
+# --- CORE PIPELINE ---
+!pipeline/
+!pipeline/*.py
+
+# --- GALLERY ---
+!gallery/
+!gallery/**
+!refactored_project_v2/frontend/web_gallery/**
+
+# --- DOCUMENTATION ---
+!README.md
+!LICENSE
+!HANDOFF.md
+!HANDOFF_NEXT_SESSION.md
+!.gitignore
+
+# --- DEPLOYMENT / SCRIPTS ---
+!scripts/
+!scripts/*.py
+!scripts/*.sh
+
+# --- CONFIG / DATA ---
+!dataset/truth.json
+!dataset/truth_changelog.jsonl
+
+# --- IGNORE LARGE DATA ---
+models/
+data/
+input/
+output/
+__pycache__/
+*.pyc
+.DS_Store
+.env
