@@ -14,6 +14,10 @@
 !gallery/**
 !refactored_project_v2/frontend/web_gallery/**
 
+# --- ASSETS (README Images) ---
+!assets/
+!assets/**
+
 # --- DOCUMENTATION ---
 !README.md
 !LICENSE
