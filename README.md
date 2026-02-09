@@ -38,8 +38,8 @@ The workflow converts raw screenshots into gallery-ready images through a 4-stag
 
 ### 2. Key Tools
 *   `pipeline/run_sam_lama_local.py`: The main entry point for the cleaning phase.
-*   `backend/restoration/run_flux_batch_v3.py`: The restoration engine wrapper.
-*   `assemble_flux_final.py`: Merges the enhanced image with the original color profile.
+*   `pipeline/run_flux_restoration.py`: The restoration engine wrapper (Flux + RealESRGAN).
+*   `pipeline/assemble_final.py`: Merges the enhanced image with the original color profile.
 
 ## Operational Workflow
 
